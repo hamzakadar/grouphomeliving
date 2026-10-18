@@ -108,6 +108,13 @@
   .home svg{width:46px;height:46px;flex:none}
   .home h3{font-size:1.5rem;margin-bottom:4px}
 
+  .options{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border-top:2px solid var(--ink)}
+  .options div{padding:24px 24px 0 0}
+  .options div+div{padding-left:24px;border-left:1px solid var(--line)}
+  .options h3{font-size:1.2rem;margin-bottom:6px}
+  @media (max-width:960px){.options{grid-template-columns:1fr 1fr}.options div:nth-child(3){padding-left:0;border-left:0}}
+  @media (max-width:700px){.options{grid-template-columns:1fr}.options div,.options div+div{padding:18px 0;border-left:0;border-bottom:1px solid var(--line)}}
+
   /* contact */
   .contact{background:var(--ink);color:#C9D0E0;padding:88px 0}
   .contact h2{color:var(--white);font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:14px;max-width:20ch}
@@ -170,7 +177,7 @@
     <div class="wrap hero-grid">
       <div>
         <h1>A home with 24&#8209;hour support, close to the people you know.</h1>
-        <p class="lede">Group Home Living provides customized and assisted living in small residential homes for adults with physical and mental disabilities. Staff are on site day and night.</p>
+        <p class="lede">Group Home Living provides customized and assisted living in small residential homes for adults 18+ and 55+, including adults with physical and mental disabilities. Staff are on site day and night.</p>
         <div class="places" aria-label="Locations"><span>Minneapolis</span><span>Bloomington</span></div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Send a referral</a>
@@ -190,11 +197,12 @@
             <li>Waiver type (CADI, BI, DD or EW/AC) and county</li>
             <li>Care needs and any safety concerns</li>
             <li>Preferred city and move-in timeline</li>
+            <li>Home needs: age group, wheelchair access, pets</li>
             <li>Your name, agency and email</li>
           </ul>
           <div class="mail-foot">
             <small>Attach the support plan if you have it.</small>
-            <a class="btn btn-send" id="compose" href="mailto:referrals@grouphomeliving.com?subject=New%20referral%3A%20%5Bclient%20initials%5D&body=Client%20name%20or%20initials%3A%0ADate%20of%20birth%3A%0AWaiver%20type%20(CADI%2C%20BI%2C%20DD%2C%20EW%2FAC)%3A%0ACounty%3A%0ACare%20needs%20and%20safety%20concerns%3A%0APreferred%20city%3A%0AMove-in%20timeline%3A%0A%0AYour%20name%2C%20agency%20and%20email%3A%0A">Start this email</a>
+            <a class="btn btn-send" id="compose" href="mailto:referrals@grouphomeliving.com?subject=New%20referral%3A%20%5Bclient%20initials%5D&body=Client%20name%20or%20initials%3A%0ADate%20of%20birth%3A%0AWaiver%20type%20(CADI%2C%20BI%2C%20DD%2C%20EW%2FAC)%3A%0ACounty%3A%0ACare%20needs%20and%20safety%20concerns%3A%0APreferred%20city%3A%0AMove-in%20timeline%3A%0AHome%20needs%20(age%20group%2C%20wheelchair%20access%2C%20pets)%3A%0A%0AYour%20name%2C%20agency%20and%20email%3A%0A">Start this email</a>
           </div>
         </div>
       </div>
@@ -276,7 +284,7 @@
     <div class="wrap">
       <div class="head">
         <h2>Where our homes are</h2>
-        <p>Our residential homes are in two Hennepin County cities.</p>
+        <p>Our homes are in Minneapolis and Bloomington. Tell us in your referral what the person needs, and we'll match them to the right home.</p>
       </div>
       <div class="homes">
         <div class="home">
@@ -287,6 +295,12 @@
           <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="23" fill="#E7EEE5"/><path d="M23 12c-5 0-8.5 3.7-8.5 8.3 0 6.2 8.5 14.2 8.5 14.2s8.5-8 8.5-14.2C31.5 15.7 28 12 23 12Z" fill="#7E9A7A"/><circle cx="23" cy="20.5" r="3.2" fill="#fff"/></svg>
           <div><h3>Bloomington</h3><p>Quiet suburban homes close to parks, shopping and medical services.</p></div>
         </div>
+      </div>
+      <div class="options">
+        <div><h3>Age groups</h3><p>Homes for adults 18+ and homes for adults 55+.</p></div>
+        <div><h3>Pets</h3><p>Pet-friendly homes and no-pet homes.</p></div>
+        <div><h3>Accessibility</h3><p>Wheelchair-accessible homes and standard homes.</p></div>
+        <div><h3>Rent</h3><p>Based on income, so residents keep part of their income for personal use.</p></div>
       </div>
     </div>
   </section>
